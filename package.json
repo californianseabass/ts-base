@@ -1,0 +1,14 @@
+{
+  "name": "base",
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "compile": "yarn babel src --out-dir build --extensions '.ts'",
+    "execute": "yarn compile > /dev/null 2>&1 && node build/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
+    "typescript": "^4.7.3"
+  }
+}

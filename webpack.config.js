@@ -1,6 +1,10 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const isProduction = Boolean(process.env.NODE_ENV === 'production')
 
 module.exports = {
+  mode: isProduction ? 'production' : 'development',
   entry: [
     './src/index.ts'
   ],
@@ -19,6 +23,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
     new ForkTsCheckerWebpackPlugin()
   ]
 };

@@ -25,5 +25,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new ForkTsCheckerWebpackPlugin()
-  ]
+  ],
+  devServer: {
+    hot: !isProduction,
+    port: 5000
+  },
+  devtool: 'inline-source-map'
 };

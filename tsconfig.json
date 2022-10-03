@@ -3,14 +3,16 @@
     "module": "commonjs",
     "declaration": true,
     "noImplicitReturns": true,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true,
     "noUnusedLocals": true,
     "sourceMap": true,
     "strict": true,
     "target": "es2018",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "baseUrl": "src",
     "outDir": "dist"
   },
-  "include": ["src"]
+  "include" : ["**/*.tsx", "**/*.ts", "**/*.d.ts"],
 }
